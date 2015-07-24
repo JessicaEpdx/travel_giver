@@ -12,7 +12,6 @@ describe "the project process", js:true do
     expect(page).to have_content 'Project for USA'
   end
 
-  # broken because of paperclip/phantom issues: delete lines 4-7 of _project.html.erb for test to work
   it "adds a project to a country and then edits that project", js:true do
     country = FactoryGirl.create(:country)
     admin = FactoryGirl.create(:admin)
@@ -33,7 +32,6 @@ describe "the project process", js:true do
 
   end
 
-  # broken because of paperclip/phantom issues: delete lines 4-7 of _project.html.erb for test to work
   it "destroys a project within a country", js:true do
     FactoryGirl.create(:country)
     FactoryGirl.create(:project)
