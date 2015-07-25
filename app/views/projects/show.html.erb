@@ -1,12 +1,12 @@
-<div class="well admin-well">
   <% if current_user && current_user.admin %>
+  <div class="well admin-well">
+
     <%= link_to "Edit project", edit_country_project_path(@country, @project) %> |
     <%= link_to "Delete project", country_project_path(@country, @project),
             :data => {:confirm => "Are you sure you want to delete this project?",
             :method => "delete"} %></p>
+  </div>
   <% end %>
-</div>
-</div>
 
 <div class="container">
   <div class="project">

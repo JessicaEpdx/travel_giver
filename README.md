@@ -24,10 +24,9 @@ Go to "www.localhost/3000"
 ### Heroku ###
 [Deployed on Heroku](https://boiling-everglades-1293.herokuapp.com/)
 
-For admin view:
-email: admin@admin.com
-password: testtest
-
+For admin view sign in:
+  email: admin@admin.com
+  password: testtest
 
 ### Debugging ###
 
