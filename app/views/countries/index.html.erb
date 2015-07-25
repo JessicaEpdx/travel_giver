@@ -116,7 +116,7 @@
         <h4 class="modal-title" id="myModalLabel">Current Countries with Active Projects in Asia</h4>
       </div>
       <div class="modal-body">
-        <% @asiaCountries.each do |country| %>
+        <% Country.asia.each do |country| %>
           <%= link_to country.name, country_path(country), remote: true %> <br />
         <% end %>
       </div>
@@ -132,7 +132,7 @@
         <h4 class="modal-title" id="myModalLabel">Current Countries with Active Projects in South America</h4>
       </div>
       <div class="modal-body">
-        <% @southAmericaCountries.each do |country| %>
+        <% Country.southAmerica.each do |country| %>
           <%= link_to country.name, country_path(country), remote: true %> <br />
         <% end %>
       </div>
@@ -148,7 +148,7 @@
         <h4 class="modal-title" id="myModalLabel">Current Countries with Active Projects in North America</h4>
       </div>
       <div class="modal-body">
-        <% @northAmericaCountries.each do |country| %>
+        <% Country.northAmerica.each do |country| %>
           <%= link_to country.name, country_path(country), remote: true %> <br />
         <% end %>
       </div>
@@ -164,7 +164,7 @@
         <h4 class="modal-title" id="myModalLabel">Current Countries with Active Projects in Europe</h4>
       </div>
       <div class="modal-body">
-        <% @europeCountries.each do |country| %>
+        <% Country.europe.each do |country| %>
           <%= link_to country.name, country_path(country), remote: true %> <br />
         <% end %>
       </div>
@@ -180,7 +180,7 @@
         <h4 class="modal-title" id="myModalLabel">Current Countries with Active Projects in australia</h4>
       </div>
       <div class="modal-body">
-        <% @australiaCountries.each do |country| %>
+        <% Country.australia.each do |country| %>
           <%= link_to country.name, country_path(country), remote: true %> <br />
         <% end %>
       </div>
@@ -196,7 +196,7 @@
         <h4 class="modal-title" id="myModalLabel">Current Countries with Active Projects in Africa</h4>
       </div>
       <div class="modal-body">
-        <% @africaCountries.each do |country| %>
+        <% Country.africa.each do |country| %>
           <%= link_to country.name, country_path(country), remote: true %> <br />
         <% end %>
       </div>
@@ -212,7 +212,7 @@
         <h4 class="modal-title" id="myModalLabel">Current Countries with Active Projects in Antartica</h4>
       </div>
       <div class="modal-body">
-        <% @antarcticaCountries.each do |country| %>
+        <% Country.antarctica.each do |country| %>
           <%= link_to country.name, country_path(country), remote: true %> <br />
         <% end %>
       </div>
