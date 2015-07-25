@@ -1,0 +1,22 @@
+<div class="project">
+<h1>All projects</h1>
+
+<% @projects.each do |project| %>
+  <div class="row">
+    <div class="col-sm-12">
+      <% country = Country.find(project.country_id) %>
+      <%=link_to project.name, country_project_path(country, project) %>
+      <p><%= country.name %></p>
+      <% if project.image %>
+        <%= image_tag (project.image), class:"country-image" %>
+      <% elsif project.project_image_file_name %>
+        <%= image_tag project.attached_image.url(:medium) %>
+      <% else %>
+      <%= image_tag ('missing.png'), class:"country-image" %>
+      <% end %>
+    </div>
+  </div>
+  <br />
+
+<% end %>
+</div>

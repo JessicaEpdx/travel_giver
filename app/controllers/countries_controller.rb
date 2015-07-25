@@ -2,13 +2,13 @@ class CountriesController < ApplicationController
 
   def index
     @countries = Country.order(:name)
-    @AsiaCountries = Country.where(:continent => "Asia")
-    @AfricaCountries = Country.where(:continent => "Africa")
-    @NorthAmericaCountries = Country.where(:continent => "North-America")
-    @SouthAmericaCountries = Country.where(:continent => "South-America")
-    @AustraliaCountries = Country.where(:continent => "Australia")
-    @EuropeCountries = Country.where(:continent => "Europe")
-    @AntarticaCountries = Country.where(:continent => "Antartica")
+    @asiaCountries = Country.where(:continent => "Asia")
+    @africaCountries = Country.where(:continent => "Africa")
+    @northAmericaCountries = Country.where(:continent => "North-America")
+    @southAmericaCountries = Country.where(:continent => "South-America")
+    @australiaCountries = Country.where(:continent => "australia")
+    @europeCountries = Country.where(:continent => "Europe")
+    @antarcticaCountries = Country.where(:continent => "Antartica")
   end
 
   def new

@@ -54,7 +54,7 @@
 
       </div>
 
-      <div class="empty-grid col-xs-2 europe" onClick ="$('#myModalEurope').modal('toggle')" id="popover8" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in Europe">
+      <div class="empty-grid col-xs-2 Europe" onClick ="$('#myModalEurope').modal('toggle')" id="popover8" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in Europe">
 
       </div>
 
@@ -74,7 +74,7 @@
 
       </div>
 
-      <div class="empty-grid col-xs-2 africa" onClick ="$('#myModalAfrica').modal('toggle')" id="popover13" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in Africa">
+      <div class="empty-grid col-xs-2 Africa" onClick ="$('#myModalAfrica').modal('toggle')" id="popover13" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in Africa">
 
       </div>
 
@@ -91,15 +91,15 @@
       <div class="empty-grid col-xs-2 south-america" onClick ="$('#myModalSouthAmerica').modal('toggle')" id="popover16" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in South America">
       </div>
 
-      <div class="empty-grid col-xs-2 africa" onClick ="$('#myModalAfrica').modal('toggle')" id="popover17" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in Africa">
+      <div class="empty-grid col-xs-2 Africa" onClick ="$('#myModalAfrica').modal('toggle')" id="popover17" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in Africa">
 
       </div>
 
-      <div class="empty-grid col-xs-2 australia" onClick ="$('#myModalAustralia').modal('toggle')" id="popover18" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in Australia">
+      <div class="empty-grid col-xs-2 australia" onClick ="$('#myModalaustralia').modal('toggle')" id="popover18" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in australia">
 
       </div>
 
-      <div class="empty-grid col-xs-2 australia" onClick ="$('#myModalAustralia').modal('toggle')" id="popover19" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in Australia">
+      <div class="empty-grid col-xs-2 australia" onClick ="$('#myModalaustralia').modal('toggle')" id="popover19" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in australia">
 
       </div>
     </div>
@@ -116,7 +116,7 @@
         <h4 class="modal-title" id="myModalLabel">Current Countries with Active Projects in Asia</h4>
       </div>
       <div class="modal-body">
-        <% @AsiaCountries.each do |country| %>
+        <% @asiaCountries.each do |country| %>
           <%= link_to country.name, country_path(country), remote: true %> <br />
         <% end %>
       </div>
@@ -132,7 +132,7 @@
         <h4 class="modal-title" id="myModalLabel">Current Countries with Active Projects in South America</h4>
       </div>
       <div class="modal-body">
-        <% @SouthAmericaCountries.each do |country| %>
+        <% @southAmericaCountries.each do |country| %>
           <%= link_to country.name, country_path(country), remote: true %> <br />
         <% end %>
       </div>
@@ -148,7 +148,7 @@
         <h4 class="modal-title" id="myModalLabel">Current Countries with Active Projects in North America</h4>
       </div>
       <div class="modal-body">
-        <% @NorthAmericaCountries.each do |country| %>
+        <% @northAmericaCountries.each do |country| %>
           <%= link_to country.name, country_path(country), remote: true %> <br />
         <% end %>
       </div>
@@ -164,7 +164,7 @@
         <h4 class="modal-title" id="myModalLabel">Current Countries with Active Projects in Europe</h4>
       </div>
       <div class="modal-body">
-        <% @EuropeCountries.each do |country| %>
+        <% @europeCountries.each do |country| %>
           <%= link_to country.name, country_path(country), remote: true %> <br />
         <% end %>
       </div>
@@ -172,15 +172,15 @@
   </div>
 </div>
 
-<div class="modal fade" id="myModalAustralia" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="myModalaustralia" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Current Countries with Active Projects in Australia</h4>
+        <h4 class="modal-title" id="myModalLabel">Current Countries with Active Projects in australia</h4>
       </div>
       <div class="modal-body">
-        <% @AustraliaCountries.each do |country| %>
+        <% @australiaCountries.each do |country| %>
           <%= link_to country.name, country_path(country), remote: true %> <br />
         <% end %>
       </div>
@@ -196,7 +196,7 @@
         <h4 class="modal-title" id="myModalLabel">Current Countries with Active Projects in Africa</h4>
       </div>
       <div class="modal-body">
-        <% @AfricaCountries.each do |country| %>
+        <% @africaCountries.each do |country| %>
           <%= link_to country.name, country_path(country), remote: true %> <br />
         <% end %>
       </div>
@@ -212,7 +212,7 @@
         <h4 class="modal-title" id="myModalLabel">Current Countries with Active Projects in Antartica</h4>
       </div>
       <div class="modal-body">
-        <% @AntarticaCountries.each do |country| %>
+        <% @antarcticaCountries.each do |country| %>
           <%= link_to country.name, country_path(country), remote: true %> <br />
         <% end %>
       </div>
