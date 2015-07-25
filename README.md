@@ -6,7 +6,7 @@ Jessica Engel, Erin Collins, Chris Sefkin, Franz Knupfer
 
 ### Description ###
 
-GlobalGiver is a way to set up countries and projects for donations.
+Global Giver is built with Rails using stripe for payment processing, stripe is set up in a testing environment but could be live using live authentication. It is a site where people can donate to any cause added by the admin. You can search countries alphabetically, see all projects, or search by continent on a map.
 
 ### Setup ###
 
@@ -20,6 +20,13 @@ clone to your Desktop
     $rails s
 
 Go to "www.localhost/3000"
+
+### Heroku ###
+[Deployed on Heroku](https://boiling-everglades-1293.herokuapp.com/)
+
+For admin view:
+email: admin@admin.com
+password: testtest
 
 
 ### Debugging ###
