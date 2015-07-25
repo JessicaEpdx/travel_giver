@@ -5,10 +5,10 @@
   <div class="row">
     <div class="col-sm-12">
       <% country = Country.find(project.country_id) %>
-      <%=link_to project.p_name, country_project_path(country, project) %>
-      <p><%= country.c_name %></p>
-      <% if project.p_image %>
-        <%= image_tag (project.p_image), class:"country-image" %>
+      <%=link_to project.name, country_project_path(country, project) %>
+      <p><%= country.name %></p>
+      <% if project.image %>
+        <%= image_tag (project.image), class:"country-image" %>
       <% elsif project.project_image_file_name %>
         <%= image_tag project.attached_image.url(:medium) %>
       <% else %>

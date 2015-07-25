@@ -8,9 +8,9 @@
               :method => "delete"} %>
     </div>
   <% end %>
-  <h1><%= @country.c_name %></h1>
+  <h1><%= @country.name %></h1>
 
-  <p><%= @country.c_description %></p>
+  <p><%= @country.description %></p>
 
   <% if @country.image %>
     <%= image_tag (@country.image), class:"country-image" %>
@@ -22,8 +22,8 @@
 
   <% if @country.projects.any? %>
     <% @country.projects.each do |project| %>
-      <h3><%= link_to project.p_name, country_project_path(@country, project), remote: true %></h3>
-      <p><%= project.p_description %></p>
+      <h3><%= link_to project.name, country_project_path(@country, project), remote: true %></h3>
+      <p><%= project.description %></p>
     <% end %>
   <% end %>
 </div>

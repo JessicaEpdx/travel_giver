@@ -13,7 +13,7 @@
 <div id="all_countries" class="col-sm-3">
     <% if @countries.any? %>
       <% @countries.each do |country| %>
-        <h3><%= link_to country.c_name, country_path(country), remote: true %></h3>
+        <h3><%= link_to country.name, country_path(country), remote: true %></h3>
         <% if country.image %>
           <%= image_tag (country.image), class:"country-image-smaller" %>
         <% else  %>
@@ -117,7 +117,7 @@
       </div>
       <div class="modal-body">
         <% @AsiaCountries.each do |country| %>
-          <%= link_to country.c_name, country_path(country), remote: true %> <br />
+          <%= link_to country.name, country_path(country), remote: true %> <br />
         <% end %>
       </div>
     </div>
@@ -133,7 +133,7 @@
       </div>
       <div class="modal-body">
         <% @SouthAmericaCountries.each do |country| %>
-          <%= link_to country.c_name, country_path(country), remote: true %> <br />
+          <%= link_to country.name, country_path(country), remote: true %> <br />
         <% end %>
       </div>
     </div>
@@ -149,7 +149,7 @@
       </div>
       <div class="modal-body">
         <% @NorthAmericaCountries.each do |country| %>
-          <%= link_to country.c_name, country_path(country), remote: true %> <br />
+          <%= link_to country.name, country_path(country), remote: true %> <br />
         <% end %>
       </div>
     </div>
@@ -165,7 +165,7 @@
       </div>
       <div class="modal-body">
         <% @EuropeCountries.each do |country| %>
-          <%= link_to country.c_name, country_path(country), remote: true %> <br />
+          <%= link_to country.name, country_path(country), remote: true %> <br />
         <% end %>
       </div>
     </div>
@@ -181,7 +181,7 @@
       </div>
       <div class="modal-body">
         <% @AustraliaCountries.each do |country| %>
-          <%= link_to country.c_name, country_path(country), remote: true %> <br />
+          <%= link_to country.name, country_path(country), remote: true %> <br />
         <% end %>
       </div>
     </div>
@@ -197,7 +197,7 @@
       </div>
       <div class="modal-body">
         <% @AfricaCountries.each do |country| %>
-          <%= link_to country.c_name, country_path(country), remote: true %> <br />
+          <%= link_to country.name, country_path(country), remote: true %> <br />
         <% end %>
       </div>
     </div>
@@ -213,7 +213,7 @@
       </div>
       <div class="modal-body">
         <% @AntarticaCountries.each do |country| %>
-          <%= link_to country.c_name, country_path(country), remote: true %> <br />
+          <%= link_to country.name, country_path(country), remote: true %> <br />
         <% end %>
       </div>
     </div>

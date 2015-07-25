@@ -9,20 +9,20 @@
     </div>
   <% end %>
 
-  <h1><%= @project.p_name %></h1>
-  <% if @project.p_image %>
-    <%= image_tag (@project.p_image), class:"country-image" %>
+  <h1><%= @project.name %></h1>
+  <% if @project.image %>
+    <%= image_tag (@project.image), class:"country-image" %>
   <% elsif @project.project_image_file_name %>
     <%= image_tag @project.attached_image.url(:medium) %>
   <% else %>
   <%= image_tag ('missing.png'), class:"country-image" %>
   <% end %>
 
-  <h3><%= @country.c_name %></h3>
+  <h3><%= @country.name %></h3>
     <p>  Total Needed: $<%= @project.total_needed %></p>
     <p> Total Donated: $<%= @project.total_donated %></p>
     <p> Number of Donations: <%= @project.donation_count %></p>
-  <p><%= @project.p_description %></p>
+  <p><%= @project.description %></p>
 
   <%= render partial: 'charges/form', project_id: @project.id %>
 </div>

@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150723223457) do
+ActiveRecord::Schema.define(version: 20150725224035) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "countries", force: :cascade do |t|
-    t.string   "c_name"
+    t.string   "name"
     t.string   "continent"
-    t.string   "c_description"
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "attached_image_file_name"
@@ -30,12 +30,11 @@ ActiveRecord::Schema.define(version: 20150723223457) do
   end
 
   create_table "projects", force: :cascade do |t|
-    t.string   "p_name"
-    t.string   "p_description"
+    t.string   "name"
+    t.string   "description"
     t.integer  "country_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "p_donation"
     t.integer  "user_id"
     t.string   "project_image_file_name"
     t.string   "project_image_content_type"
@@ -44,7 +43,7 @@ ActiveRecord::Schema.define(version: 20150723223457) do
     t.integer  "donation_count",             default: 0
     t.integer  "total_needed"
     t.integer  "total_donated",              default: 0
-    t.string   "p_image"
+    t.string   "image"
   end
 
   create_table "projects_users", force: :cascade do |t|

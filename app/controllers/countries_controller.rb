@@ -1,7 +1,7 @@
 class CountriesController < ApplicationController
 
   def index
-    @countries = Country.order(:c_name)
+    @countries = Country.order(:name)
     @AsiaCountries = Country.where(:continent => "Asia")
     @AfricaCountries = Country.where(:continent => "Africa")
     @NorthAmericaCountries = Country.where(:continent => "North-America")
@@ -32,7 +32,7 @@ class CountriesController < ApplicationController
 
   def show
     @country = Country.find(params[:id])
-    @countries = Country.order(:c_name)
+    @countries = Country.order(:name)
   end
 
   def edit
@@ -62,6 +62,6 @@ class CountriesController < ApplicationController
 
   private
   def country_params
-    params.require(:country).permit(:c_name, :continent, :c_description, :attached_image)
+    params.require(:country).permit(:name, :continent, :description, :attached_image)
   end
 end
