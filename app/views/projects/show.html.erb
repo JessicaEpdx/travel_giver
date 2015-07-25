@@ -20,9 +20,9 @@
       <% else %>
       <%= image_tag ('missing.png'), class:"country-image" %>
       <% end %>
-        <p> Total Needed: $<%= @project.total_needed %></p>
-        <p> Total Donated: $<%= @project.total_donated %></p>
-        <p> Number of Donations: <%= @project.donation_count %></p>
+        <p>Total Needed: $<%= @project.total_needed %></p>
+        <p>Total Donated: $<%= @project.total_donated %></p>
+        <p>Number of Donations: <%= @project.donation_count %></p>
         <p><%= @project.p_description %></p>
       </div>
     <%= render partial: 'charges/form', project_id: @project.id %>

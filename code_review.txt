@@ -1,0 +1,33 @@
+Code Review Notes
+
+*Add ENV files to gitignore. Make sure that you commit the addition to gitignore before adding the .env file.
+
+*SimpleCov configuration is needed to have the coverage generated. In the spec helper add (require 'simplecov', and SimpleCov.start).
+  *To test the entire project with simplecov, go to the test.rb file in the environment folder, change config.eager_load to true.
+
+* Avoid single word commits (but overall good commit messages!).
+
+* First spec fails ('the add a country process adds a country to the home page')
+
+* 86.42% spec coverage (with config.eager_load set to true)
+
+* Beautiful design! Very easy to navigate, and the map is a nice touch. The only thing I can think of is to provide the user with some sort of confirmation when a payment has been successfully made.
+
+* Allprojects is a somewhat confusing name for a controller - maybe indicate that it's exclusively for the homepage by naming it something like HomeController or RootController.
+
+* Don't use UpperCamelCase for non-global variables (e.g., AsiaCountries, instead: asia_countries, or asiaCountries)
+
+* Consider using scopes in your country model to group countries by continent, instead of doing that in controller.
+  Check out http://api.rubyonrails.org/classes/ActiveRecord/Scoping/Named/ClassMethods.html#method-i-scope
+
+* country = Country.find(project.country_id) in allprojects index can be refactored as project.country
+
+* create.html.erb for charges is no longer necessary, and can be safely deleted.
+
+* indexs.html.erb for countries: the html for the map would probably be better off in a partial. Kudos for all the scripting!
+
+* nice job with css, and nesting css with SASS!
+
+* old comments about non-working specs can be removed from projects_spec (were removed in this commit)
+
+* consider adding the public images generated with the seeds to gitignore. Then your project will be smaller when pushing to git.
