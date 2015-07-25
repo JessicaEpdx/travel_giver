@@ -11,7 +11,7 @@ users = User.create([
 ])
 
 countries= Country.create([
-{name: "Bangladesh", description:"In risk of major floods", continent:"Asia", image:"http://www.winwallpapers.net/w1/2011/08/Bangladesh.jpg"},
+{name: "Bangladesh", description:"In risk of major floods", continent:"Asia", image:"http://images.nationalgeographic.com/wpf/media-live/photos/000/461/cache/bandarban-paddies-bangladesh_46130_990x742.jpg"},
 {name: "Nepal", description:"Just had a major earthquake", continent:"Asia", image:"http://www.matobo.co.uk/wp-content/uploads/2014/09/Nepal-2.jpg"},
 {name: "Ghana", description:"Problems with environmental exploitation", continent:"Africa", image:"https://s-media-cache-ak0.pinimg.com/736x/c4/59/8d/c4598d0af8dfabb94eb47f9a210a6ff9.jpg"},
 {name: "Ecuador", description:"Issues with overexploitation of food sources", continent:"South-America", image:"http://www.augustana.edu/Images/international/Ecuador/travelEcuador7.jpg"}
