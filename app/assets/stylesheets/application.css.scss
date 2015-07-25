@@ -128,7 +128,7 @@ html {
 }
 
 .navbar{
-  background-color:#f8af53;
+  background-color:#faac57;
 }
 
 .content{
@@ -151,6 +151,9 @@ html {
 
 .navbar-default .navbar-brand {
     color: #cf2828;
+    &:hover{
+      color: #9c1922;
+    }
 }
 
 .header{
