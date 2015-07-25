@@ -15,7 +15,7 @@ class ChargesController < ApplicationController
     @project.donation_count += 1
     @project.total_donated += @a
     @project.save
-
+    @country = @project.country
     customer = Stripe::Customer.create(
       :email => 'example@stripe.com',
       :card  => params[:stripeToken]
@@ -27,11 +27,6 @@ class ChargesController < ApplicationController
       :description => 'Rails Stripe customer',
       :currency    => 'usd'
     )
-
-    respond_to do |format|
-      format.html { redirect_to root_path}
-      format.js {redirect_to root_path}
-    end
 
   rescue Stripe::CardError => e
     flash[:error] = e.message
